@@ -4,7 +4,9 @@
 #include <string>
 #include <vector>
 
-using namespace std::string;
+using namespace std;
+
+typedef struct Lagu *adrLagu;
 
 struct Lagu {
     int id;
