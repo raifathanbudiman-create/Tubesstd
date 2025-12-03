@@ -40,5 +40,34 @@ struct Playlist {
     Playlist* next;
 };
 
+struct Akun {
+    string username;
+    string password;
+    string role; // "admin" / "user"
+
+    Playlist* firstPlaylist; // head playlist milik akun
+
+    Akun* next;
+    Akun* prev;
+};
+
+// List Akun
+struct ListAkun {
+    Akun* first;
+    Akun* last;
+};
+
+// ===== Queue sederhana untuk antrian pemutaran (optional) =====
+struct NodeQueue {
+    Lagu* ref;
+    NodeQueue* next;
+};
+
+struct Queue {
+    NodeQueue* front;
+    NodeQueue* rear;
+};
+
+
 
 #endif
